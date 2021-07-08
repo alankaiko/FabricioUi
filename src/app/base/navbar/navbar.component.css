@@ -1,0 +1,38 @@
+.barramenugeral {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  outline: 0 none;
+  background-color: #fff;
+  -moz-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px 0 rgb(0 0 0 / 10%);
+}
+
+.barramenugeral .logotipo {
+	width: 25%;
+  height: 100%;
+}
+
+.barramenugeral .logotipo a{
+	width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.barramenugeral .logotipo a img{
+	width: 40%;
+  height: 50%;
+}
+
+.barramenugeral .barramenu {
+	width: 75%;
+  margin-top: 20px;
+}
+
+:host /deep/ p-menubar .p-menubar{
+ float: right;
+ border: none;
+}
