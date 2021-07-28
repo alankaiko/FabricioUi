@@ -1,0 +1,62 @@
+<div class="conteudogeral">
+  <div class="esquerda">
+    <div class="titulo">
+      <span>CARROS USADOS</span>
+    </div>
+
+    <div class="filtro">
+
+    </div>
+
+    <div class="dropdaus">
+      <p-accordion [multiple]="true">
+        <p-accordionTab header="Marca de modelo">
+          teoria
+        </p-accordionTab>
+
+        <p-accordionTab header="Ano">
+          teoria
+        </p-accordionTab>
+
+        <p-accordionTab header="Preço">
+          teoria
+        </p-accordionTab>
+
+        <p-accordionTab header="Tipo">
+          teoria
+        </p-accordionTab>
+
+        <p-accordionTab header="Transmissão">
+          teoria
+        </p-accordionTab>
+      </p-accordion>
+    </div>
+  </div>
+
+  <div class="direita p-field">
+    <p-dataView #dv [value]="carros" [paginator]="true" [rows]="filtro.itensPorPagina"
+      filterBy="nome" [sortField]="sortField" [sortOrder]="sortOrder" layout="grid"
+      [totalRecords]="totalRegistros" (onLazyLoad)="aoMudarPagina($event)">
+
+      <ng-template pTemplate="header">
+        <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+          <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Price"
+            (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+
+          <span class="p-input-icon-left p-mb-2 p-mb-md-0">
+            <i class="pi pi-search"></i>
+            <input type="search" pInputText placeholder="Search by Name">
+          </span>
+          <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+        </div>
+      </ng-template>
+
+      <ng-template let-carro pTemplate="listItem">
+
+      </ng-template>
+      <ng-template let-carro pTemplate="gridItem">
+
+      </ng-template>
+    </p-dataView>
+  </div>
+</div>

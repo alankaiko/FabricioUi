@@ -1,0 +1,24 @@
+
+<div class="p-fluid p-grid">
+  <div class="p-grid p-col-12 p-md-8 p-lg-9">
+    <div class="p-field p-col-12 p-md-4 p-lg-1">
+      <label>Código</label>
+      <input type="text" pInputText [readonly]="true" [(ngModel)]="marca.codigo"
+        #codigo="ngModel" name="codigo">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Marca</label>
+
+      <input type="text" pInputText [(ngModel)]="marca.nome"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Modelo</label>
+
+      <input type="text" pInputText [(ngModel)]="marca.descricao"
+        #nome="ngModel" name="nome">
+    </div>
+  </div>
+</div>

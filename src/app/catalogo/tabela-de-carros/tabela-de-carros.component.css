@@ -1,0 +1,40 @@
+.conteudogeral {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+}
+
+.conteudogeral .esquerda {
+  width: 30%;
+  height: 100%;
+}
+
+.conteudogeral .esquerda .titulo {
+  width: 100%;
+  height: 45px;
+}
+
+.conteudogeral .esquerda .filtro {
+  width: 100%;
+  height: 45px;
+}
+
+.conteudogeral .direita {
+  width: 70%;
+  height: 100%;
+}
+
+:host /deep/ .p-accordion p-accordiontab .p-accordion-tab {
+  border: none;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+:host /deep/ .p-accordion .p-accordion-header .p-accordion-header-link {
+  border: none;
+}
+
+:host /deep/ .p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus {
+  box-shadow: none;
+  color: #3374db;
+  background-color: #fff;
+}

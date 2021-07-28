@@ -1,0 +1,104 @@
+
+<div class="p-fluid p-grid">
+  <div class="p-grid p-col-12 p-md-8 p-lg-9">
+    <div class="p-field p-col-12 p-md-4 p-lg-1">
+      <label>Código</label>
+      <input type="text" pInputText [readonly]="true" [(ngModel)]="carro.codigo"
+        #codigo="ngModel" name="codigo">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Marca</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.modelo.marca.nome"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Modelo</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.modelo.nome"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Ano Modelo</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.anomodelo"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Ano Fabricação</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.anofabricacao"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Cor</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.cor"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Valor Veículo</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.valorveiculo"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Valor Fipe</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.valorfipe"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Placa Veículo</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.placaveiculo"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Km</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.quilometragem"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Observação</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.observacao"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Blindado?</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.blindado"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <div class="p-field p-col-12 p-md-8 p-lg-8">
+      <label>Versão</label>
+
+      <input type="text" pInputText [(ngModel)]="carro.versao"
+        #nome="ngModel" name="nome">
+    </div>
+
+    <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
+      [multiple]="true" accept="image/*" [maxFileSize]="1000000">
+
+      <ng-template pTemplate="content">
+          <ul *ngIf="carro.imagens.length">
+              <li *ngFor="let imagem of carro.imagens">{{imagem.nome}}</li>
+          </ul>
+      </ng-template>
+    </p-fileUpload>
+  </div>
+</div>

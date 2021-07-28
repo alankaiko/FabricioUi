@@ -5,10 +5,14 @@
 
 .geral .menuinicial {
   width: 100%;
-  height: 85px;
+  height: 10%;
 }
 
 .geral .menupesquisa {
   width: 100%;
-  height: 70px;
+}
+
+.geral .conteudo {
+  width: 100%;
+  height: 87%;
 }

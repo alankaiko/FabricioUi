@@ -19,27 +19,23 @@ export class NavbarComponent implements OnInit {
     this.items = [
       {
         icon: 'pi pi-fw pi-pencil',
-        label: 'Comprar carros',
-        routerLink: ['listapaciente']
+        label: 'Cadastrar',
+        routerLink: ['cadastrar-carros']
       },
       {
         icon: 'pi pi-fw pi-home',
-        label: 'Vender Carros',
-        routerLink: ['listapaciente/novo']
-      },
-      {
-        icon: 'pi pi-fw pi-trash',
-        label: 'App I9 motors',
-        routerLink: ['agenda']
-      },
-      {
-        icon: 'pi pi-fw pi-thumbs-up',
-        label: 'Sobre nós',
-        routerLink: ['listatipoatendimento']
+        label: 'Listar',
+        routerLink: ['comprar-carros']
       },
       {
         icon: 'pi pi-fw pi-pencil',
-        label: 'Logout'
+        label: 'Marcas',
+        routerLink: ['cadastrar-marcas']
+      },
+      {
+        icon: 'pi pi-fw pi-home',
+        label: 'Modelos',
+        routerLink: ['cadastrar-modelos']
       }
     ];
   }
